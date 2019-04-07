@@ -12,6 +12,39 @@ body{
   justify-items: center;
 }
 
+.box{
+  margin: 1vw;
+  width: 30vw;
+}
+
+section {
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .box {
+    width: 80vw;
+  }
+  section {
+    margin-top: 80px;
+  }
+}
+
+.comic {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+  grid-gap: 20px;
+}
+
+.comicimg {
+  max-width: 800px;
+}
+
 img{
   height: auto;
   width: 100%;
@@ -19,15 +52,13 @@ img{
 }
 
 
-.box{
-  margin: 1vw;
-  width: 30vw;
-}
 
-nav {
+.nav-animation{
   animation-delay: 100ms;
   animation-duration: 1s;
   animation-name: slideDown;
+}
+nav {
   left: 0;
   right: 0;
   top: 0;
@@ -36,28 +67,30 @@ nav {
   background-color: #fff;
   width: 100%;
   height: 40px;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
 }
 
-.logowrap {
+.logo-animation {
   animation-duration: 1.0s;
   opacity: 0;
   animation-fill-mode: both;
   animation-delay: 300ms;
   animation-name: bounceIn;
-  margin-top: 15px;
-
 }
+
+.logowrap{
+  margin-top: 15px;
+}
+
 .logo {
   text-align: left;
   margin-top: auto;
   margin-left: 2.0vw;
   color: black;
   text-decoration: none;
-  font-size: 1.0em;
+  font-size: 2.0em;
   letter-spacing: 1.5px;
   font-family: 'Lobster', cursive;
 
@@ -67,7 +100,7 @@ nav {
   margin-top: 30px;
   margin-right: 20px;
   text-align: right;
-  font-size: 0.8em;
+  font-size: 1.5em;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -95,7 +128,7 @@ nav {
 }
 
 
-/*** Bigger Font sizes in Navbar for nonMobile ***/
+/*** Bigger Font sizes in Navbar for nonMobile 
 @media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
   .navitems {
     font-size: 1.5em;
@@ -104,9 +137,10 @@ nav {
     font-size: 2.0em;
   }
   nav {
-    height: 60px;
+    height: 100px;
   }
 }
+***/
 
 
 /*** Animation ***/
