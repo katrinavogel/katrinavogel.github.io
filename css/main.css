@@ -21,18 +21,6 @@ section {
   margin-top: 50px;
 }
 
-@media only screen and (max-width: 768px) {
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .box {
-    width: 80vw;
-  }
-  section {
-    margin-top: 80px;
-  }
-}
 
 .comic {
   display: grid;
@@ -133,15 +121,32 @@ nav {
   .navitems {
     font-size: 1.5em;
   }
-  .logo {
-    font-size: 2.0em;
-  }
   nav {
     height: 100px;
   }
 }
 ***/
 
+@media only screen and (max-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .box {
+    width: 80vw;
+  }
+  section {
+    margin-top: 80px;
+  }
+  .navitems{
+    font-size: 1.3em;
+  }
+  .logo {
+    font-size: 1.8em;
+  }
+
+
+}
 
 /*** Animation ***/
 nav, 
