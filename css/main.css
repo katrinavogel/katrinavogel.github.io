@@ -3,6 +3,13 @@ body{
   font-family: "Raleway";
 }
 
+
+img{
+  height: auto;
+  width: 100%;
+  max-width: 500px;
+}
+
 .grid {
   animation-name: slideUp;
   animation-delay: 600ms;
@@ -12,15 +19,37 @@ body{
   justify-items: center;
 }
 
-.box{
+.bx{
   margin: 1vw;
   width: 30vw;
 }
 
-section {
-  margin-top: 50px;
+.navbar-item {
+  font-size: 1.3em;
+  margin-right: 10px;
 }
 
+.logo {
+  text-align: left;
+  margin-top: auto;
+  color: black;
+  text-decoration: none;
+  font-size: 2.0em;
+  letter-spacing: 1.5px;
+  font-family: 'Lobster', cursive;
+}
+
+nav {
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+
+.mainc {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
 
 .comic {
   display: grid;
@@ -33,33 +62,8 @@ section {
   max-width: 800px;
 }
 
-img{
-  height: auto;
-  width: 100%;
-  max-width: 500px;
-}
 
-
-
-.nav-animation{
-  animation-delay: 100ms;
-  animation-duration: 1s;
-  animation-name: slideDown;
-}
-nav {
-  left: 0;
-  right: 0;
-  top: 0;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: #fff;
-  width: 100%;
-  height: 40px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-}
-
+/*** Animation ***/
 .logo-animation {
   animation-duration: 1.0s;
   opacity: 0;
@@ -68,92 +72,19 @@ nav {
   animation-name: bounceIn;
 }
 
-.logowrap{
-  margin-top: 15px;
-}
 
-.logo {
-  text-align: left;
-  margin-top: auto;
-  margin-left: 2.0vw;
-  color: black;
-  text-decoration: none;
-  font-size: 2.0em;
-  letter-spacing: 1.5px;
-  font-family: 'Lobster', cursive;
-
-}
-
-.navitems {
-  margin-top: 30px;
-  margin-right: 20px;
-  text-align: right;
-  font-size: 1.5em;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.navbar-item {
-  margin-right: 1vw;
-  text-decoration: none;
-  color: black;
-}
-.navbar-item:hover {
-  text-decoration: bold;
-  color: #81a2be;
-
-}
-
-
-
-.parent {
-  position: relative;
-}
-.child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-/*** Bigger Font sizes in Navbar for nonMobile 
-@media all and (max-width: 699px) and (min-width: 520px), (min-width: 1151px) {
-  .navitems {
-    font-size: 1.5em;
-  }
-  nav {
-    height: 100px;
-  }
-}
-***/
-
-@media only screen and (max-width: 768px) {
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .box {
-    width: 80vw;
-  }
-  section {
-    margin-top: 80px;
-  }
-  .navitems{
-    font-size: 1.3em;
-  }
-  .logo {
-    font-size: 1.8em;
-  }
-
-
-}
-
-/*** Animation ***/
 nav, 
 .grid {
   animation-timing-function: cubic-bezier(0, 0.5, 0, 1);
   animation-fill-mode: both;
 }
+
+.navbar-end {
+  animation-delay: 100ms;
+  animation-duration: 1s;
+  animation-name: slideDown;
+}
+
 
 @keyframes bounceIn {
   from {
@@ -187,5 +118,3 @@ nav,
     transform: translateY(0);
   }
 }
-
-
